@@ -24,6 +24,6 @@ app.get("/",(req,res)=>{
 app.use('/api/feedback', feedbackRoutes);
 app.use('/v1', countRoute);
 
-app.listen(5000, () => {
-    console.log('Server running on port 5000');
+app.listen(port, () => {
+    console.log('Server running on port 8080');
 });
