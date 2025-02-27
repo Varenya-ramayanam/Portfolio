@@ -27,7 +27,7 @@ export default function Contact() {
     setResponseMessage("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/feedback/submit", {
+      const response = await fetch("https://portfolio-backend-kigf.onrender.com/api/feedback/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -52,7 +52,7 @@ export default function Contact() {
   // Fetch total feedback count
   const fetchFeedbackCount = async () => {
     try {
-        const response = await fetch("http://localhost:5000/v1/count");
+        const response = await fetch("https://portfolio-backend-kigf.onrender.com/v1/count");
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
